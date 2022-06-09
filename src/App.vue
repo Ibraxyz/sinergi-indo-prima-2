@@ -31,6 +31,7 @@
             </ul>
           </div>
         </nav>
+
         <div class="content">
           <div class="container">
             <div style="box-sizing: border-box; padding-top: 40px">
@@ -42,7 +43,19 @@
                 </p>
               </div>
               <div class="col-4" style="text-align: right">
-                <img src="./assets/hero-bordered-2.png" alt="" />
+                <img class="big-hero-img" src="./assets/hero-bordered-2.png" alt="" />
+                <div class="small-hero-img">
+                  <div>
+                    <img src="./assets/sip-employee.png" alt="" />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/gambar1.png"
+                      alt=""
+                      style="position: relative; right: 460px; bottom: 70px"
+                    />
+                  </div>
+                </div>
               </div>
               <div style="text-align: center; margin-top: 40px">
                 <Button text="Scroll down" variant="">
@@ -125,9 +138,21 @@ ul li {
   vertical-align: middle;
 }
 
-.col-4 img {
+.big-hero-img {
   width: auto;
   height: 500px;
+}
+
+.small-hero-img {
+  display: none;
+}
+
+.small-hero-img div {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  overflow: hidden;
+  height: 250px;
 }
 
 ul li:first-child {
@@ -243,9 +268,19 @@ ul li:last-child {
     display: none;
   }
 
-  .col-4 img {
-    width: auto;
-    height: 400px;
+  .big-hero-img {
+    display: none;
+  }
+
+  .small-hero-img {
+    display: block;
+  }
+}
+
+/** very small device screen **/
+@media only screen and (max-width: 400px) {
+  .small-hero-img div:first-child img {
+    top: 20px;
   }
 }
 </style>
