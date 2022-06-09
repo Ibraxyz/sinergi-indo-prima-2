@@ -14,8 +14,9 @@
 <style scoped>
 .wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  background: #1363df;
 }
 
 .bg-wrapper {
@@ -34,10 +35,6 @@
   top: 0px;
   left: 0px;
   z-index: 2;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.1)
-  );
+  background-image: linear-gradient(to bottom, rgba(6, 40, 61, 1), rgba(6, 40, 61, 0));
 }
 </style>

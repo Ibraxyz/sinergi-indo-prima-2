@@ -1,64 +1,59 @@
 <template>
   <Hero>
     <template v-slot:background>
-      <AnimatedBackground :images="images" />
+      <div
+        :style="{
+          backgroundImage: `url(${bgImg})`,
+          width: '100%',
+          height: '100%',
+        }"
+      ></div>
+      <!-- <AnimatedBackground :images="images" /> -->
     </template>
     <template #content>
       <div class="temp">
         <nav>
-          <div class="container" >
+          <div class="container">
             <ul>
-              <li >Logo</li>
+              <li>
+                <img
+                  src="./assets/sip-transparent.png"
+                  alt=""
+                  style="width: 80px; height: auto"
+                />
+              </li>
               <li>Home</li>
               <li>About</li>
               <li>Service</li>
+              <li>Legal</li>
+              <li>Facilities</li>
+              <li>Contact</li>
             </ul>
           </div>
         </nav>
         <div class="content">
           <div class="container">
-            <div style="box-sizing: border-box; padding-top: 200px">
-              <h1 style="font-size: 100px; margin: 0px">Grow Together.</h1>
-              <p style="max-width: 650px; opacity: 0.8; font-size: 24px">
-                It is a long established fact that a reader will be distracted by the
-                readable content of a page when looking at its layout. The point of using
-                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                as opposed to using 'Content here, content here', making it look like
-                readable English.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </template>
-  </Hero>
-    <Hero>
-    <template v-slot:background>
-      <AnimatedBackground :images="images" />
-    </template>
-    <template #content>
-      <div class="temp">
-        <nav>
-          <div class="container" >
-            <ul>
-              <li >Logo</li>
-              <li>Home</li>
-              <li>About</li>
-              <li>Service</li>
-            </ul>
-          </div>
-        </nav>
-        <div class="content">
-          <div class="container">
-            <div style="box-sizing: border-box; padding-top: 200px">
-              <h1 style="font-size: 100px; margin: 0px">Grow Together.</h1>
-              <p style="max-width: 650px; opacity: 0.8; font-size: 24px">
-                It is a long established fact that a reader will be distracted by the
-                readable content of a page when looking at its layout. The point of using
-                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                as opposed to using 'Content here, content here', making it look like
-                readable English.
-              </p>
+            <div style="box-sizing: border-box; padding-top: 40px">
+              <div class="col-6">
+                <h1>The Most Reliable Service Provider</h1>
+                <p>
+                  perusahaan penyedia jasa prima, handal, baik dan profesional serta
+                  memiliki standard nasional dan terpercaya.
+                </p>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <img src="./assets/hero-bordered-2.png" alt="" />
+              </div>
+              <div style="text-align: center; margin-top: 40px">
+                <Button text="Scroll down" variant="">
+                  <img
+                    src="./assets/images/arrow_downward_24px.svg"
+                    alt=""
+                    class="shake-vertical"
+                    style="position: relative"
+                  />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -72,37 +67,75 @@ import "./assets/base.css";
 import AnimatedBackground from "./components/AnimatedBackground.vue";
 import Hero from "./components/Hero.vue";
 import { ref } from "vue";
+import Button from "./components/Button.vue";
+import Bg from "./assets/tile_background.png";
 
-const images = ref(["bg1.png", "bg2.png", "bg3.png"]);
+const images = ref(["ar1.jpg", "sip1.png", "sip2.png"]);
+const bgImg = ref(Bg);
 </script>
 
 <style scoped>
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0px;
+}
 .temp {
   color: #ffffff;
+}
+p {
+  opacity: 1;
+  font-size: 24px;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
   display: flex;
   justify-content: right;
+  align-items: center;
   margin: 0px;
   box-sizing: border-box;
   padding: 10px;
 }
 
 ul li {
-  padding-top:10px;
+  padding-top: 15px;
   margin: 10px 20px 10px 0px;
-  text-transform: uppercase;
+  /** text-transform: uppercase; **/
   list-style-type: none;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.col-6 {
+  width: 60%;
+  box-sizing: border-box;
+  padding: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.col-4 {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.col-4 img {
+  width: auto;
+  height: 500px;
 }
 
 ul li:first-child {
   margin-right: auto;
 }
 
-ul li:last-child{
-  margin-right:0px;
+ul li:last-child {
+  margin-right: 0px;
 }
 
 .content {
@@ -112,5 +145,107 @@ ul li:last-child{
   box-sizing: border-box;
   max-width: 1110px;
   margin: auto;
+  padding: 15px;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-5-24 16:42:49
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-vertical
+ * ----------------------------------------
+ */
+
+.shake-vertical {
+  -webkit-animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+    both;
+  animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+}
+
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col-4,
+  .col-6 {
+    width: 100%;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .col-4 img {
+    width: auto;
+    height: 400px;
+  }
 }
 </style>
