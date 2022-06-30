@@ -68,15 +68,15 @@
       <div
         style="
           background: #000000;
-          background: -webkit-linear-gradient(to bottom, #000000, rgba(29, 67, 80, 0.1));
-          background: linear-gradient(to bottom, #000000, rgba(29, 67, 80, 0));
+          background: -webkit-linear-gradient(to bottom, #020b4a, rgba(29, 67, 80, 0.1));
+          background: linear-gradient(to bottom, #020b4a, rgba(29, 67, 80, 0));
           z-index: 5;
 
           position: absolute;
           top: 0px;
           left: 0px;
           width: 100%;
-          height: 30%;
+          height: 40%;
           opacity: 1;
         "
       ></div>

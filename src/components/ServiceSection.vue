@@ -65,7 +65,7 @@
             <DecorLineBg to="bottom" width="10px" height="400px" top="50%" right="130%" />
 
             <!-- triangle image -->
-            <TriangleCornerImage :img="Satpam" />
+            <TriangleCornerImage :img="Cs" />
           </div>
         </Container>
       </div>
@@ -95,7 +95,7 @@
               right="-30%"
             />
             <!-- triangle image -->
-            <TriangleCornerImage :img="CleaningService" triangleColor="#fafafa" />
+            <TriangleCornerImage :img="Pp" triangleColor="#fafafa" />
           </div>
           <div class="col5">
             <Typography variant="h3" mode="dark" sx="color:#01579B"
@@ -298,8 +298,10 @@ import TriangleCornerImage from "./TriangleCornerImage.vue";
 import DecorLineBg from "./DecorLineBg.vue";
 import Satpam from "../assets/gambar1.png";
 import CleaningService from "../assets/cleaningservice.png";
+import Cs from "../assets/cs.png";
 import KaryawanPerkantoran from "../assets/karyawan-perkantoran.png";
 import Sales from "../assets/sales.png";
+import Pp from "../assets/pp3.png";
 </script>
 
 <style scoped>
