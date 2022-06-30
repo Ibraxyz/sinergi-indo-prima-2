@@ -69,7 +69,7 @@
         style="
           background: #000000;
           background: -webkit-linear-gradient(to bottom, #000000, rgba(29, 67, 80, 0.1));
-          background: linear-gradient(to bottom, #000000, rgba(29, 67, 80, 0.1));
+          background: linear-gradient(to bottom, #000000, rgba(29, 67, 80, 0));
           z-index: 5;
 
           position: absolute;
@@ -77,7 +77,7 @@
           left: 0px;
           width: 100%;
           height: 30%;
-          opacity: 0.8;
+          opacity: 1;
         "
       ></div>
 
@@ -94,7 +94,7 @@
         "
       />
 
-      <img src="../assets/gambar1.png" alt="" style="width: auto; height: 100%" />
+      <img :src="props.img" alt="" style="width: auto; height: 508px" />
     </div>
     <!-- end of triangle cornered div -->
   </div>

@@ -9,34 +9,15 @@
             <div class="borderBottomRed"></div>
           </div>
           <Typography variant="p" mode="light">
-            Perusahaan penyedia jasa prima, handal, baik dan profesional serta
-            memiliki standard nasional dan terpercaya.</Typography
+            Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
+            standard nasional dan terpercaya.</Typography
           >
-          <Typography variant="span" mode="light"
-            >Pelajari lebih lanjut</Typography
-          >
+          <Typography variant="span" mode="light">Pelajari lebih lanjut</Typography>
         </div>
 
         <div class="col5">
-          <div
-            style="
-              background-color: #fff;
-              padding: 20px;
-              box-sizing: border-box;
-              border-radius: 10px;
-            "
-          >
-            <img
-              src="../assets/sip1.png"
-              alt=""
-              style="
-                width: 100%;
-                height: auto;
-                box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6);
-                border-bottom: 6px solid red;
-                border-top: 6px solid red;
-              "
-            />
+          <div style="background-color: #fafafa; padding: 15px; box-sizing: border-box">
+            <TriangleCornerImage :img="Satpam" />
           </div>
         </div>
       </Container>
@@ -47,6 +28,8 @@
 <script setup>
 import Typography from "./Typography.vue";
 import Container from "./Container.vue";
+import TriangleCornerImage from "./TriangleCornerImage.vue";
+import Satpam from "../assets/gambar1.png";
 
 function alertMe() {
   alert("ok");

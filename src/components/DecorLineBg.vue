@@ -21,25 +21,66 @@
       }"
     >
       <div v-if="props.to === 'bottom'" class="dynamic-dir"></div>
+      <div v-if="props.to === 'right'" class="dynamic-dir-hor"></div>
+      <div v-if="props.reverse === true" class="dynamic-dir-hor-rev"></div>
     </div>
   </div>
 </template>
 
 <script setup>
-const props = defineProps(["to", "top", "left", "right", "height", "width", "bottom"]);
+const props = defineProps([
+  "reverse",
+  "to",
+  "top",
+  "left",
+  "right",
+  "height",
+  "width",
+  "bottom",
+]);
 </script>
 
 <style scoped>
 .dynamic-dir {
   position: absolute;
   top: 0px;
-  left: -20px;
-  border-top: 25px solid red;
-  border-bottom: 25px solid rgba(0, 0, 0, 0);
-  border-left: 25px solid rgba(0, 0, 0, 0);
-  border-right: 25px solid rgba(0, 0, 0, 0);
+  left: -15px;
+  border-top: 20px solid orange;
+  border-bottom: 20px solid rgba(0, 0, 0, 0);
+  border-left: 20px solid rgba(0, 0, 0, 0);
+  border-right: 20px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   animation-name: movement1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.dynamic-dir-hor {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  border-top: 20px solid rgba(0, 0, 0, 0);
+  border-bottom: 20px solid rgba(0, 0, 0, 0);
+  border-left: 20px solid rgba(0, 0, 0, 0);
+  border-right: 20px solid orange;
+  box-sizing: border-box;
+  animation-name: movement2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.dynamic-dir-hor-rev {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  border-top: 20px solid rgba(0, 0, 0, 0);
+  border-bottom: 20px solid rgba(0, 0, 0, 0);
+  border-left: 20px solid orange;
+  border-right: 20px solid rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  animation-name: movement3;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   opacity: 1;
@@ -52,6 +93,28 @@ const props = defineProps(["to", "top", "left", "right", "height", "width", "bot
   }
   to {
     top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes movement2 {
+  from {
+    left: 100%;
+    opacity: 1;
+  }
+  to {
+    left: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes movement3 {
+  from {
+    left: 0%;
+    opacity: 1;
+  }
+  to {
+    left: 100%;
     opacity: 0;
   }
 }
