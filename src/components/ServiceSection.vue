@@ -160,21 +160,13 @@
         <Container noPadding>
           <div class="col5" style="position: relative">
             <!-- line decor bg vertical bottom 4 -->
-            <div
-              style="
-                background: #e96443;
-                background: -webkit-linear-gradient(to bottom, #904e95, #e96443);
-                background: linear-gradient(to bottom, #904e95, #e96443);
-
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                top: -20%;
-                right: 38.2%;
-                z-index: -10;
-                height: 400px;
-              "
-            ></div>
+            <DecorLineBg
+              to="bottom"
+              width="10px"
+              height="400px"
+              top="-20%"
+              right="38.2%"
+            />
             <!-- triangle image -->
             <TriangleCornerImage img="gambar1.png" triangleColor="#fafafa" />
           </div>
