@@ -1,4 +1,5 @@
 <template>
+  <!-- Hero -->
   <Hero>
     <template v-slot:background>
       <div
@@ -13,7 +14,7 @@
     <template #content>
       <div class="temp">
         <nav>
-          <div class="container">
+          <Container>
             <ul>
               <li>
                 <img
@@ -22,25 +23,39 @@
                   style="width: 80px; height: auto"
                 />
               </li>
-              <li>Home</li>
-              <li>About</li>
-              <li>Service</li>
-              <li>Legal</li>
-              <li>Facilities</li>
-              <li>Contact</li>
+              <li>
+                <TopMenuItem text="Home" />
+              </li>
+              <li>
+                <TopMenuItem text="About" />
+              </li>
+              <li>
+                <TopMenuItem text="Service" />
+              </li>
+              <li>
+                <TopMenuItem text="Facilities" />
+              </li>
+              <li>
+                <TopMenuItem text="Legal" />
+              </li>
+              <li>
+                <TopMenuItem text="Contact" />
+              </li>
             </ul>
-          </div>
+          </Container>
         </nav>
 
         <div class="content">
-          <div class="container">
-            <div style="box-sizing: border-box; padding-top: 40px">
+          <Container>
+            <div style="box-sizing: border-box; padding-top: 20px">
               <div class="col-6">
-                <h1>The Most Reliable Service Provider</h1>
-                <p>
-                  perusahaan penyedia jasa prima, handal, baik dan profesional serta
+                <Typography variant="h1" mode="light"
+                  >The Most Reliable Service Provider</Typography
+                >
+                <Typography variant="p" mode="light">
+                  Perusahaan penyedia jasa prima, handal, baik dan profesional serta
                   memiliki standard nasional dan terpercaya.
-                </p>
+                </Typography>
               </div>
               <div class="col-4" style="text-align: right">
                 <img class="big-hero-img" src="./assets/hero-bordered-2.png" alt="" />
@@ -57,22 +72,32 @@
                   </div>
                 </div>
               </div>
-              <div style="text-align: center; margin-top: 40px">
-                <Button text="Scroll down" variant="">
-                  <img
-                    src="./assets/images/arrow_downward_24px.svg"
-                    alt=""
-                    class="shake-vertical"
-                    style="position: relative"
-                  />
-                </Button>
+              <div style="text-align: center; margin-top: 50px">
+                <img
+                  src="./assets/images/arrow_downward_24px.svg"
+                  alt=""
+                  class="shake-vertical"
+                  style="position: relative"
+                />
               </div>
             </div>
-          </div>
+          </Container>
         </div>
       </div>
     </template>
   </Hero>
+
+  <!-- services list -->
+  <div style="margin-bottom: 80px">
+    <Section1>
+      <ServiceSection />
+    </Section1>
+  </div>
+
+  <!-- legal -->
+  <div style="margin-bottom: 80px">
+    <FacilitiesSection />
+  </div>
 </template>
 
 <script setup>
@@ -82,26 +107,31 @@ import Hero from "./components/Hero.vue";
 import { ref } from "vue";
 import Button from "./components/Button.vue";
 import Bg from "./assets/tile_background.png";
+import TopMenuItem from "./components/TopMenuItem.vue";
+import Section1 from "./components/Section1.vue";
+import ServiceSection from "./components/ServiceSection.vue";
+import FacilitiesSection from "./components/FacilitiesSection.vue";
+import Container from "./components/Container.vue";
+import Typography from "./components/Typography.vue";
+import ThreedBox from "./components/ThreedBox.vue";
 
 const images = ref(["ar1.jpg", "sip1.png", "sip2.png"]);
 const bgImg = ref(Bg);
+const bottomDivIndex = ref(-1);
+
+function showBottomDiv(num) {
+  bottomDivIndex.value = num;
+}
+
+function hideBottomDiv(num) {
+  bottomDivIndex.value = 0;
+}
 </script>
 
 <style scoped>
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 50px;
-  font-weight: 600;
-  margin: 0px;
-}
-.temp {
-  color: #ffffff;
-}
-p {
-  opacity: 1;
-  font-size: 24px;
-  font-weight: 100;
-  font-family: "Montserrat", sans-serif;
+.borderBottomRed {
+  border-bottom: 3px solid red;
+  margin-top: 3px;
 }
 
 ul {
@@ -119,7 +149,6 @@ ul li {
   /** text-transform: uppercase; **/
   list-style-type: none;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
 }
 
 .col-6 {
@@ -161,16 +190,6 @@ ul li:first-child {
 
 ul li:last-child {
   margin-right: 0px;
-}
-
-.content {
-}
-
-.container {
-  box-sizing: border-box;
-  max-width: 1110px;
-  margin: auto;
-  padding: 15px;
 }
 
 /* ----------------------------------------------

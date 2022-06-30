@@ -14,9 +14,9 @@
 <style scoped>
 .wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: 800px;
   position: relative;
-  background: #1363df;
+  background: red;
 }
 
 .bg-wrapper {

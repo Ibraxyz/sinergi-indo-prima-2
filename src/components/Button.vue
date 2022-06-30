@@ -3,7 +3,7 @@ export default {
   props: {
     text: {
       type: String,
-      required: true,
+      required: false,
     },
     variant: {
       type: String,
@@ -15,7 +15,7 @@ export default {
 
 <template>
   <button :class="variant === 'filled' ? 'purple_bg' : 'transparent_bg'">
-    <span style="margin-right: 10px">{{ text }}</span>
+    <span v-if="text !== null" style="margin-right: 10px">{{ text }}</span>
     <slot></slot>
   </button>
 </template>
