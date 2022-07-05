@@ -17,6 +17,56 @@
 
         <div class="col5">
           <img :src="Satpam" alt="" style="width: 100%; height: auto" class="display" />
+          <div
+            style="
+              margin-top: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+            "
+          >
+            <div
+              style="
+                border: 1px solid rgba(255, 0, 100, 1);
+                box-sizing: border-box;
+                padding: 5px;
+              "
+            >
+              <BaseTriangle position="right" style="position: relative; left: -30%" />
+            </div>
+            <div
+              style="
+                box-sizing: border-box;
+                overflow-x: scroll;
+                flex: 1;
+                border: 1px solid rgba(255, 0, 100, 1);
+                height: 52px;
+                white-space: nowrap;
+              "
+            >
+              <img
+                v-for="i of [0, 1, 2, 3, 4, 5, 6, 7, 8]"
+                style="
+                  height: 52px;
+                  widht: auto;
+                  opacity: 0.5;
+                  border: 1px solid rgba(255, 0, 100, 1);
+                "
+                alt=""
+                :src="Satpam"
+              />
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(255, 0, 100, 1);
+                box-sizing: border-box;
+                padding: 5px;
+              "
+            >
+              <BaseTriangle position="left" style="position: relative; right: -30%" />
+            </div>
+          </div>
         </div>
       </Container>
     </div>
@@ -28,6 +78,7 @@ import Typography from "./Typography.vue";
 import Container from "./Container.vue";
 import TriangleCornerImage from "./TriangleCornerImage.vue";
 import Satpam from "../assets/gambar1.png";
+import BaseTriangle from "./BaseTriangle.vue";
 
 function alertMe() {
   alert("ok");
