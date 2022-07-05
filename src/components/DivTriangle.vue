@@ -6,7 +6,9 @@
       top: props.top ? props.top : '-50px',
       left: props.left ? props.left : '-50px',
       right: props.right ? props.right : '-50px',
-      transform: props.rotate ? `rotate(${props.rotate}deg)` : `rotate(${-45}deg)`,
+      transform: props.rotate
+        ? `rotate(${props.rotate}deg)`
+        : `rotate(${-45}deg)`,
       'border-bottom': `${props.big ? props.big : 50}px solid ${
         props.bgColor ? props.bgColor : '#f3f8fb'
       }`,

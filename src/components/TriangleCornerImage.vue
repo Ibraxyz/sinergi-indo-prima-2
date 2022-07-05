@@ -60,7 +60,9 @@
     </div>
 
     <!--triangle cornered div that display image -->
-    <div style="width: auto; height: 100%; overflow: hidden; position: relative">
+    <div
+      style="width: auto; height: 100%; overflow: hidden; position: relative"
+    >
       <!-- the top left triangle for cut off the top left corner of the image's div -->
       <DivTriangle :bgColor="props.triangleColor" />
 
@@ -68,7 +70,11 @@
       <div
         style="
           background: #000000;
-          background: -webkit-linear-gradient(to bottom, #020b4a, rgba(29, 67, 80, 0.1));
+          background: -webkit-linear-gradient(
+            to bottom,
+            #020b4a,
+            rgba(29, 67, 80, 0.1)
+          );
           background: linear-gradient(to bottom, #020b4a, rgba(29, 67, 80, 0));
           z-index: 5;
 

@@ -16,9 +16,7 @@
         </div>
 
         <div class="col5">
-          <div style="background-color: #fafafa; padding: 15px; box-sizing: border-box">
-            <TriangleCornerImage :img="Satpam" />
-          </div>
+          <img :src="Satpam" alt="" style="width: 100%; height: auto" class="display" />
         </div>
       </Container>
     </div>
@@ -59,8 +57,8 @@ function alertMe() {
   left: 0px;
   width: 100%;
   height: 100%;
-  /** background-image: linear-gradient(to bottom, rgba(6, 40, 61, 1.0), rgba(6, 40, 61, 0)); **/
-  background-color: rgba(6, 40, 61, 0.7);
+  background-color: #020b4a;
+  opacity: 0.9;
 }
 .content {
   position: relative;
@@ -72,6 +70,13 @@ function alertMe() {
   box-sizing: border-box;
   width: 50%;
   vertical-align: top;
+}
+
+.display {
+  -moz-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
+  -webkit-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
+  box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
+  border: 1px solid rgba(255, 0, 100, 1);
 }
 
 @media only screen and (max-width: 768px) {

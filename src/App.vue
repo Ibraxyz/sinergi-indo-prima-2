@@ -1,17 +1,52 @@
 <template>
   <!-- Hero -->
-  <Hero>
+  <HeroVer2>
+    <template #desktopmenu>
+      <nav style="position: absolute; top: 0px; left: 0px; z-index: 3; width: 100%">
+        <Container>
+          <ul>
+            <li>
+              <img
+                src="./assets/sip-transparent.png"
+                alt=""
+                style="width: 64px; height: auto"
+              />
+            </li>
+            <li>
+              <TopMenuItem text="Home" />
+            </li>
+            <li>
+              <TopMenuItem text="About" />
+            </li>
+            <li>
+              <TopMenuItem text="Service" />
+            </li>
+            <li>
+              <TopMenuItem text="Facilities" />
+            </li>
+            <li>
+              <TopMenuItem text="Legal" />
+            </li>
+            <li>
+              <TopMenuItem text="Contact" />
+            </li>
+          </ul>
+        </Container>
+      </nav>
+    </template>
+  </HeroVer2>
+  <!--<Hero>
+    
     <template v-slot:background>
       <div
         :style="{
-          backgroundImage: `url(${bgImg})`,
+          opacity: 0.0,
           width: '100%',
           height: '100%',
         }"
       ></div>
-      <!-- <AnimatedBackground :images="images" /> -->
     </template>
-    <template #content>
+      <template #content>
       <div class="temp">
         <nav>
           <Container>
@@ -47,8 +82,15 @@
 
         <div class="content">
           <Container>
-            <div style="box-sizing: border-box; padding-top: 20px">
-              <div class="col-6">
+            <div
+              style="
+                box-sizing: border-box;
+                padding-top: 20px;
+                position: relative;
+                background: black;
+              "
+            >
+              <div class="col-4" style="background: red">
                 <Typography variant="h1" mode="light"
                   >The Most Reliable Service Provider</Typography
                 >
@@ -57,20 +99,20 @@
                   memiliki standard nasional dan terpercaya.
                 </Typography>
               </div>
-              <div class="col-4" style="text-align: right">
-                <img class="big-hero-img" src="./assets/hero-bordered-2.png" alt="" />
-                <div class="small-hero-img">
-                  <div>
-                    <img src="./assets/sip-employee.png" alt="" />
-                  </div>
-                  <div>
-                    <img
-                      src="./assets/gambar1.png"
-                      alt=""
-                      style="position: relative; right: 460px; bottom: 70px"
-                    />
-                  </div>
-                </div>
+              <div class="col-6" style="overflow: hidden; background: red">
+                  <img
+                  src="./assets/gambar1.png"
+                  alt=""
+                  style="
+                    width: auto;
+                    height: 100%;
+                    margin-top: 20p;
+                    position: relative;
+                    z-index: 20x;
+                  "
+                /> 
+              </div>
+              <div style="text-align: center">
               </div>
               <div style="text-align: center; margin-top: 50px">
                 <img
@@ -78,14 +120,55 @@
                   alt=""
                   class="shake-vertical"
                   style="position: relative"
-                />
+                /> 
               </div>
             </div>
           </Container>
         </div>
       </div>
+    </template> 
+    <template #dynamic>
+      <div
+        style="
+          position: relative;
+          width: 60%;
+          height: 60%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 230px;
+          perspective: 600px;
+        "
+      >
+        <div class="dyn-images-entry">
+          <div
+            v-for="i of [
+              CleaningService,
+              Pp,
+              Satpam,
+              Cs,
+              KaryawanPerkantoran,
+              Sales,
+              Pp,
+              Satpam,
+              CleaningService,
+              Cs,
+              KaryawanPerkantoran,
+              CleaningService,
+              Pp,
+              Satpam,
+              Cs,
+              KaryawanPerkantoran,
+            ]"
+            class="threedbox"
+          >
+            <div class="threedimg">
+              <img :src="i" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </template>
-  </Hero>
+  </Hero> -->
 
   <!-- services list -->
   <div style="margin-bottom: 80px">
@@ -102,7 +185,6 @@
 
 <script setup>
 import "./assets/base.css";
-import AnimatedBackground from "./components/AnimatedBackground.vue";
 import Hero from "./components/Hero.vue";
 import { ref } from "vue";
 import Button from "./components/Button.vue";
@@ -114,6 +196,16 @@ import FacilitiesSection from "./components/FacilitiesSection.vue";
 import Container from "./components/Container.vue";
 import Typography from "./components/Typography.vue";
 import ThreedBox from "./components/ThreedBox.vue";
+import HeroImageGroup from "./components/HeroImageGroup.vue";
+
+import Satpam from "./assets/gambar1.png";
+import CleaningService from "./assets/cleaningservice.png";
+import Cs from "./assets/cs.png";
+import KaryawanPerkantoran from "./assets/karyawan-perkantoran.png";
+import Sales from "./assets/sales.png";
+import Pp from "./assets/pp3.png";
+
+import HeroVer2 from "./components/HeroVer2.vue";
 
 const images = ref(["ar1.jpg", "sip1.png", "sip2.png"]);
 const bgImg = ref(Bg);
@@ -159,12 +251,63 @@ ul li {
   vertical-align: middle;
 }
 
+.threedbox {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 25%;
+  height: 25%;
+  padding: 0px;
+}
+
+.dyn-images-entry {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+  -webkit-animation: images-entry-rotate 1s linear alternate both;
+  animation: images-entry-rotate 1s linear alternate both;
+}
+
+@-webkit-keyframes images-entry-rotate {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(45deg);
+  }
+}
+
 .col-4 {
   width: 40%;
   box-sizing: border-box;
   padding: 15px;
   display: inline-block;
   vertical-align: middle;
+}
+
+.threedimg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.threedimg img {
+  width: 100%;
+  height: auto;
+  opacity: 0.2;
+}
+
+.threedimg img:hover {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.threedimg:hover {
+  border: 5px solid red;
 }
 
 .big-hero-img {

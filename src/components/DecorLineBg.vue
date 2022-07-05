@@ -1,5 +1,6 @@
 <template>
   <div
+    id="root_decor_wrapper"
     :style="{
       background: '#e96443',
       background: `-webkit-linear-gradient(to ${to}, #e96443, #904e95)`,
@@ -22,7 +23,7 @@
     >
       <div v-if="props.to === 'bottom'" class="dynamic-dir"></div>
       <div v-if="props.to === 'right'" class="dynamic-dir-hor"></div>
-      <div v-if="props.reverse === true" class="dynamic-dir-hor-rev"></div>
+      <div v-if="props.to === 'left'" class="dynamic-dir-hor-rev"></div>
     </div>
   </div>
 </template>
@@ -116,6 +117,12 @@ const props = defineProps([
   to {
     left: 100%;
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #root_decor_wrapper {
+    display: none;
   }
 }
 </style>
