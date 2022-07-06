@@ -16,7 +16,9 @@
         </div>
 
         <div class="col5">
-          <img :src="Satpam" alt="" style="width: 100%; height: auto" class="display" />
+          <div style="width: 100%; height: 300px; overflow: hidden" class="displayImg">
+            <img :src="Satpam" alt="" style="width: auto; height: 300px" />
+          </div>
           <div
             style="
               margin-top: 10px;
@@ -28,7 +30,9 @@
           >
             <div
               style="
-                border: 1px solid rgba(255, 0, 100, 1);
+                border-top: 1px solid rgba(255, 0, 100, 1);
+                border-left: 1px solid rgba(255, 0, 100, 1);
+                border-bottom: 1px solid rgba(255, 0, 100, 1);
                 box-sizing: border-box;
                 padding: 5px;
               "
@@ -45,21 +49,13 @@
                 white-space: nowrap;
               "
             >
-              <img
-                v-for="i of [0, 1, 2, 3, 4, 5, 6, 7, 8]"
-                style="
-                  height: 52px;
-                  widht: auto;
-                  opacity: 0.5;
-                  border: 1px solid rgba(255, 0, 100, 1);
-                "
-                alt=""
-                :src="Satpam"
-              />
+              <img v-for="i of Imgs" class="small-thumb" alt="" :src="i" />
             </div>
             <div
               style="
-                border: 1px solid rgba(255, 0, 100, 1);
+                border-top: 1px solid rgba(255, 0, 100, 1);
+                border-right: 1px solid rgba(255, 0, 100, 1);
+                border-bottom: 1px solid rgba(255, 0, 100, 1);
                 box-sizing: border-box;
                 padding: 5px;
               "
@@ -78,11 +74,14 @@ import Typography from "./Typography.vue";
 import Container from "./Container.vue";
 import TriangleCornerImage from "./TriangleCornerImage.vue";
 import Satpam from "../assets/gambar1.png";
+import CleaningService from "../assets/cleaningservice.png";
+import Cs from "../assets/cs.png";
+import KaryawanPerkantoran from "../assets/karyawan-perkantoran.png";
+import Sales from "../assets/sales.png";
+import Pp from "../assets/pp3.png";
 import BaseTriangle from "./BaseTriangle.vue";
 
-function alertMe() {
-  alert("ok");
-}
+const Imgs = [Satpam, Cs, CleaningService, KaryawanPerkantoran, Sales, Pp];
 </script>
 
 <style scoped>
@@ -100,6 +99,16 @@ function alertMe() {
 .imgPerspective {
   width: 100%;
   height: auto;
+}
+.small-thumb {
+  height: 52px;
+  width: auto;
+  opacity: 0.5;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.small-thumb:hover {
+  opacity: 1;
 }
 
 .overlay {
@@ -123,11 +132,11 @@ function alertMe() {
   vertical-align: top;
 }
 
-.display {
+.displayImg {
+  border: 1px solid rgba(255, 0, 100, 1);
   -moz-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
   -webkit-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
   box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
-  border: 1px solid rgba(255, 0, 100, 1);
 }
 
 @media only screen and (max-width: 768px) {
