@@ -1,9 +1,7 @@
 <template>
   <div style="box-sizing: border-box; padding-top: 0px">
     <div style="text-align: center">
-      <Typography variant="h2" mode="dark" sx="color:#01579B"
-        >Our Services</Typography
-      >
+      <Typography variant="h2" mode="dark" sx="color:#01579B">Our Services</Typography>
     </div>
     <div class="borderBottomRed"></div>
 
@@ -37,13 +35,10 @@
               >Customer Service</Typography
             >
             <Typography variant="p" mode="dark">
-              Perusahaan penyedia jasa prima, handal, baik dan profesional serta
-              memiliki standard nasional dan terpercaya.
+              Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
+              standard nasional dan terpercaya.
             </Typography>
-            <Typography
-              variant="span"
-              mode="dark"
-              sx="color:#01579B;font-weight:100"
+            <Typography variant="span" mode="dark" sx="color:#01579B;font-weight:100"
               >Pelajari lebih lanjut</Typography
             >
           </div>
@@ -64,22 +59,10 @@
             <!-- end of line decor bg vertical -->
 
             <!-- line decor bg horizontal satpam-->
-            <DecorLineBg
-              to="right"
-              top="50%"
-              left="-30%"
-              height="10px"
-              width="100%"
-            />
+            <DecorLineBg to="right" top="50%" left="-30%" height="10px" width="100%" />
 
             <!-- line decor bg vertical satpam -->
-            <DecorLineBg
-              to="bottom"
-              width="10px"
-              height="400px"
-              top="50%"
-              right="130%"
-            />
+            <DecorLineBg to="bottom" width="10px" height="400px" top="50%" right="130%" />
 
             <!-- triangle image -->
             <TriangleCornerImage :img="Cs" />
@@ -91,13 +74,7 @@
         <Container noPadding>
           <div class="col5" style="position: relative">
             <!-- line decor bg vertical 2 -->
-            <DecorLineBg
-              to="bottom"
-              width="10px"
-              height="400px"
-              top="-20%"
-              right="30%"
-            />
+            <DecorLineBg to="bottom" width="10px" height="400px" top="-20%" right="30%" />
 
             <!-- line decor bg horizontal 2-->
             <DecorLineBg
@@ -125,8 +102,8 @@
               >Pelatihan Pendidikan</Typography
             >
             <Typography variant="p" mode="dark">
-              Perusahaan penyedia jasa prima, handal, baik dan profesional serta
-              memiliki standard nasional dan terpercaya.
+              Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
+              standard nasional dan terpercaya.
             </Typography>
             <Typography variant="span" mode="dark" sx="color:#01579B"
               >Pelajari lebih lanjut</Typography
@@ -160,17 +137,12 @@
 
         <Container noPadding>
           <div class="col5" style="position: relative">
-            <Typography variant="h3" mode="dark" sx="color:#01579B"
-              >Satpam</Typography
-            >
+            <Typography variant="h3" mode="dark" sx="color:#01579B">Satpam</Typography>
             <Typography variant="p" mode="dark">
-              Perusahaan penyedia jasa prima, handal, baik dan profesional serta
-              memiliki standard nasional dan terpercaya.
+              Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
+              standard nasional dan terpercaya.
             </Typography>
-            <Typography
-              variant="span"
-              mode="dark"
-              sx="color:#01579B;font-weight:100"
+            <Typography variant="span" mode="dark" sx="color:#01579B;font-weight:100"
               >Pelajari lebih lanjut</Typography
             >
           </div>
@@ -180,22 +152,10 @@
             <!-- container -->
 
             <!-- line decor bg horizontal satpam-->
-            <DecorLineBg
-              to="right"
-              top="50%"
-              left="-30%"
-              height="10px"
-              width="100%"
-            />
+            <DecorLineBg to="right" top="50%" left="-30%" height="10px" width="100%" />
 
             <!-- line decor bg vertical satpam -->
-            <DecorLineBg
-              to="bottom"
-              width="10px"
-              height="400px"
-              top="50%"
-              right="130%"
-            />
+            <DecorLineBg to="bottom" width="10px" height="400px" top="50%" right="130%" />
 
             <!-- triangle image -->
             <TriangleCornerImage :img="Satpam" />
@@ -207,13 +167,7 @@
         <Container noPadding>
           <div class="col5" style="position: relative">
             <!-- line decor bg vertical 2 -->
-            <DecorLineBg
-              to="bottom"
-              width="10px"
-              height="400px"
-              top="-20%"
-              right="30%"
-            />
+            <DecorLineBg to="bottom" width="10px" height="400px" top="-20%" right="30%" />
 
             <!-- line decor bg horizontal 2-->
             <DecorLineBg
@@ -234,18 +188,15 @@
               right="-30%"
             />
             <!-- triangle image -->
-            <TriangleCornerImage
-              :img="CleaningService"
-              triangleColor="#fafafa"
-            />
+            <TriangleCornerImage :img="CleaningService" triangleColor="#fafafa" />
           </div>
           <div class="col5">
             <Typography variant="h3" mode="dark" sx="color:#01579B"
               >Cleaning Service</Typography
             >
             <Typography variant="p" mode="dark">
-              Perusahaan penyedia jasa prima, handal, baik dan profesional serta
-              memiliki standard nasional dan terpercaya.
+              Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
+              standard nasional dan terpercaya.
             </Typography>
             <Typography variant="span" mode="dark" sx="color:#01579B"
               >Pelajari lebih lanjut</Typography
@@ -280,13 +231,7 @@
         <Container noPadding>
           <div class="col5" style="position: relative">
             <!-- line decor bg horizontal bottom 3-->
-            <DecorLineBg
-              to="right"
-              top="150%"
-              left="59.8%"
-              width="100%"
-              height="10px"
-            />
+            <DecorLineBg to="right" top="150%" left="59.8%" width="100%" height="10px" />
             <!-- line decor bg vertical bottom 3 -->
             <DecorLineBg
               to="bottom"
@@ -299,8 +244,8 @@
               >Karyawan Perkantoran</Typography
             >
             <Typography variant="p" mode="dark">
-              Perusahaan penyedia jasa prima, handal, baik dan profesional serta
-              memiliki standard nasional dan terpercaya.
+              Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
+              standard nasional dan terpercaya.
             </Typography>
             <Typography variant="span" mode="dark" sx="color:#01579B"
               >Pelajari lebih lanjut</Typography
@@ -332,8 +277,8 @@
               >Sales Promotion dan Office Support</Typography
             >
             <Typography variant="p" mode="dark">
-              Perusahaan penyedia jasa prima, handal, baik dan profesional serta
-              memiliki standard nasional dan terpercaya.
+              Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
+              standard nasional dan terpercaya.
             </Typography>
             <Typography variant="span" mode="dark" sx="color:#01579B"
               >Pelajari lebih lanjut</Typography

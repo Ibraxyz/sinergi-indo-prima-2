@@ -177,9 +177,14 @@
     </Section1>
   </div>
 
-  <!-- legal -->
-  <div style="margin-bottom: 80px">
+  <!-- Facilities  -->
+  <div style="">
     <FacilitiesSection />
+  </div>
+
+  <!-- legals -->
+  <div style="">
+    <LegalSection />
   </div>
 </template>
 
@@ -206,6 +211,8 @@ import Sales from "./assets/sales.png";
 import Pp from "./assets/pp3.png";
 
 import HeroVer2 from "./components/HeroVer2.vue";
+
+import LegalSection from "./components/LegalSection.vue";
 
 const images = ref(["ar1.jpg", "sip1.png", "sip2.png"]);
 const bgImg = ref(Bg);

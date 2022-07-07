@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper bg-pan-right">
     <div class="overlay"></div>
+    <div class="grad-overlay"></div>
     <div class="content">
       <Container>
         <div class="col5">
@@ -16,8 +17,17 @@
         </div>
 
         <div class="col5">
-          <div style="width: 100%; height: 300px; overflow: hidden" class="displayImg">
-            <img :src="Satpam" alt="" style="width: auto; height: 300px" />
+          <div
+            style="
+              width: 100%;
+              height: 300px;
+              overflow: hidden;
+              text-align: center;
+              background: #020b4a;
+            "
+            class="displayImg"
+          >
+            <img :src="selectedPhoto" alt="" style="width: auto; height: 300px" />
           </div>
           <div
             style="
@@ -35,7 +45,9 @@
                 border-bottom: 1px solid rgba(255, 0, 100, 1);
                 box-sizing: border-box;
                 padding: 5px;
+                cursor: pointer;
               "
+              @click="shiftPhoto('left')"
             >
               <BaseTriangle position="right" style="position: relative; left: -30%" />
             </div>
@@ -49,7 +61,13 @@
                 white-space: nowrap;
               "
             >
-              <img v-for="i of Imgs" class="small-thumb" alt="" :src="i" />
+              <img
+                v-for="i of Imgs"
+                class="small-thumb"
+                alt=""
+                :src="i"
+                @click="changePhoto(i)"
+              />
             </div>
             <div
               style="
@@ -58,7 +76,9 @@
                 border-bottom: 1px solid rgba(255, 0, 100, 1);
                 box-sizing: border-box;
                 padding: 5px;
+                cursor: pointer;
               "
+              @click="shiftPhoto('right')"
             >
               <BaseTriangle position="left" style="position: relative; right: -30%" />
             </div>
@@ -70,6 +90,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import Typography from "./Typography.vue";
 import Container from "./Container.vue";
 import TriangleCornerImage from "./TriangleCornerImage.vue";
@@ -82,6 +103,34 @@ import Pp from "../assets/pp3.png";
 import BaseTriangle from "./BaseTriangle.vue";
 
 const Imgs = [Satpam, Cs, CleaningService, KaryawanPerkantoran, Sales, Pp];
+const selectedPhoto = ref(Satpam);
+
+function changePhoto(p) {
+  selectedPhoto.value = p;
+}
+
+function shiftPhoto(direction) {
+  let currentIndex = Imgs.indexOf(selectedPhoto.value);
+  switch (direction) {
+    case "left":
+      if (currentIndex == 0) {
+      } else {
+        currentIndex--;
+        changePhoto(Imgs[currentIndex]);
+      }
+      break;
+    case "right":
+      if (currentIndex == Imgs.length - 1) {
+      } else {
+        currentIndex++;
+        changePhoto(Imgs[currentIndex]);
+      }
+      break;
+
+    default:
+      break;
+  }
+}
 </script>
 
 <style scoped>
@@ -95,6 +144,7 @@ const Imgs = [Satpam, Cs, CleaningService, KaryawanPerkantoran, Sales, Pp];
   position: relative;
   padding-bottom: 80px;
   padding-top: 80px;
+  overflow: hidden;
 }
 .imgPerspective {
   width: 100%;
@@ -118,8 +168,19 @@ const Imgs = [Satpam, Cs, CleaningService, KaryawanPerkantoran, Sales, Pp];
   width: 100%;
   height: 100%;
   background-color: #020b4a;
-  opacity: 0.9;
+  opacity: 0.7;
 }
+
+.grad-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgb(2, 11, 74), rgba(0, 0, 0, 0));
+  z-index: 9;
+}
+
 .content {
   position: relative;
   z-index: 10;
