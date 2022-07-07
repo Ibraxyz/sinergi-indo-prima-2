@@ -2,14 +2,14 @@
   <div class="wrapperx">
     <!-- card -->
     <div class="card red-glow">
-      <img :src="Legal1" alt="" style="width: 100%; height: auto" />
+      <img :src="props.info.img" alt="" style="width: 100%; height: auto" />
     </div>
 
     <!-- card shadow -->
     <div class="card-shadow">
       <div class="card-shadow-content-holder">
         <img
-          :src="Legal1"
+          :src="props.info.img"
           alt=""
           style="
             width: 100%;
@@ -28,6 +28,7 @@
 
 <script setup>
 import Legal1 from "../assets/legal1.png";
+const props = defineProps(["info"]);
 </script>
 
 <style scoped>
