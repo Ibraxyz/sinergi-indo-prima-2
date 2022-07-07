@@ -1,7 +1,13 @@
 <template>
   <div class="wrapper">
     <!-- wrapper for full screen image viewer (documents) -->
-    <FullscreenDoc />
+    <FullscreenDoc
+      :isVisible="isFullScreenViewerVisible"
+      :images="Legals"
+      :activeIndex="activeLegal"
+      @close-event="isFullScreenViewerVisible = false"
+      @change-event="changePic($event)"
+    />
     <Container noPadding>
       <div class="col5" style="position: relative">
         <!-- wrapper for info display -->
@@ -86,7 +92,10 @@
               "
             >
               <!-- search icon button-->
-              <div style="width: 64px; height: 64px; position: relative; top: 26%">
+              <div
+                style="width: 64px; height: 64px; position: relative; top: 26%"
+                @click="isFullScreenViewerVisible = true"
+              >
                 <img :src="SearchIcon" alt="" style="width: 100%; height: auto" />
               </div>
             </div>
@@ -201,6 +210,7 @@ const Legals = [
 ];
 
 const activeLegal = ref(0);
+const isFullScreenViewerVisible = ref(false);
 
 function shiftLegal(dir) {
   switch (dir) {
@@ -217,6 +227,11 @@ function shiftLegal(dir) {
     default:
       break;
   }
+}
+
+function changePic(e) {
+  //alert("from parent" + e);
+  activeLegal.value = e;
 }
 </script>
 
