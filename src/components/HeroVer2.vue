@@ -99,6 +99,8 @@ function changeBackground(e) {
   top: 35%;
   left: 58%;
   margin-left: -15%;
+  -webkit-animation: images-entry-scale 1s linear alternate both;
+  animation: images-entry-scale 1s linear alternate both;
 }
 
 .kenburns-top {
@@ -160,6 +162,36 @@ function changeBackground(e) {
     transform: scale(1.25) translateY(-15px);
     -webkit-transform-origin: top;
     transform-origin: top;
+  }
+}
+
+@keyframes images-entry-scale {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 0%;
+    height: 30%;
+  }
+  100% {
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@-webkit-keyframes images-entry-scale {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 0%;
+    height: 30%;
+  }
+  100% {
+    width: 30%;
+    height: 30%;
   }
 }
 </style>

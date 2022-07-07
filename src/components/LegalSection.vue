@@ -1,5 +1,7 @@
 <template>
   <div class="wrapper">
+    <!-- wrapper for full screen image viewer (documents) -->
+    <FullscreenDoc />
     <Container noPadding>
       <div class="col5" style="position: relative">
         <!-- wrapper for info display -->
@@ -113,7 +115,7 @@ import Typography from "./Typography.vue";
 import LegalDocument from "./LegalDocument.vue";
 import SearchIcon from "../assets/icons8-search-100.png/";
 import BaseTriangle from "./BaseTriangle.vue";
-
+import FullscreenDoc from "./FullscreenDoc.vue";
 import Legal1 from "../assets/legal1.png/";
 import Legal2 from "../assets/legal2.png/";
 import Legal3 from "../assets/legal3.png/";

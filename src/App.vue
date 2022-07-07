@@ -284,6 +284,36 @@ ul li {
   }
 }
 
+@keyframes images-entry-scale {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 52%;
+    height: 0%;
+  }
+  100% {
+    width: 52%;
+    height: 30%;
+  }
+}
+
+@-webkit-keyframes images-entry-scale {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 52%;
+    height: 0%;
+  }
+  100% {
+    width: 52%;
+    height: 30%;
+  }
+}
+
 .col-4 {
   width: 40%;
   box-sizing: border-box;

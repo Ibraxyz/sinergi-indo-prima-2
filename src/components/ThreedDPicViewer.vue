@@ -64,8 +64,10 @@ function changePicture(i, index) {
 
 .threed-displayer {
   position: absolute;
-  width: 52%;
-  height: 30%;
+  /**   width: 52%;
+  height: 30%; */
+  width: 0%;
+  height: 0%;
   bottom: 30%;
   right: 4%;
   overflow: hidden;
@@ -74,6 +76,8 @@ function changePicture(i, index) {
   -webkit-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
   box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
   border: 1px solid rgba(255, 0, 100, 1);
+  -webkit-animation: images-entry-scale 1s linear alternate both;
+  animation: images-entry-scale 1s linear alternate both;
 }
 
 .img-cover {
@@ -111,6 +115,36 @@ function changePicture(i, index) {
   }
   100% {
     transform: rotateX(60deg);
+  }
+}
+
+@keyframes images-entry-scale {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 52%;
+    height: 0%;
+  }
+  100% {
+    width: 52%;
+    height: 30%;
+  }
+}
+
+@-webkit-keyframes images-entry-scale {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 52%;
+    height: 0%;
+  }
+  100% {
+    width: 52%;
+    height: 30%;
   }
 }
 
