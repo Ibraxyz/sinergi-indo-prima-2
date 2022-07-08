@@ -195,13 +195,13 @@
       <div style="position: relative; width: 100%; height: 100%">
         <!-- decor line -->
         <div
+          class="first-decor"
           style="
             position: absolute;
             top: 0px;
             left: 0px;
             background-image: linear-gradient(to right, rgba(255, 0, 100, 1), red);
             height: 7px;
-            width: 100%;
           "
         ></div>
       </div>
@@ -517,6 +517,30 @@ ul li:last-child {
 @media only screen and (max-width: 400px) {
   .small-hero-img div:first-child img {
     top: 20px;
+  }
+}
+
+.first-decor {
+  width: 0%;
+  -webkit-animation: first-decor-anim 1s linear alternate both;
+  animation: first-decor-anim 1s linear alternate both;
+}
+
+@keyframes first-decor-anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes first-decor-anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
 </style>

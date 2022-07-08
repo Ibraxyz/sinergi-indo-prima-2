@@ -52,8 +52,8 @@
             <!-- line decor bg vertical satpam -->
             <DecorLineBg to="bottom" width="10px" height="400px" top="50%" right="130%" />
 
-            <!-- triangle image -->
-            <TriangleCornerImage :img="Cs" />
+            <!-- image -->
+            <DecoratedImg :img="Cs" />
           </div>
         </Container>
       </div>
@@ -62,7 +62,7 @@
         <Container noPadding>
           <div class="col5" style="position: relative">
             <!-- line decor bg vertical 2 -->
-            <DecorLineBg to="bottom" width="10px" height="400px" top="-20%" right="30%" />
+            <DecorLineBg to="bottom" width="10px" height="200px" top="-20%" right="30%" />
 
             <!-- line decor bg horizontal 2-->
             <DecorLineBg
@@ -78,12 +78,12 @@
             <DecorLineBg
               to="bottom"
               width="10px"
-              height="400px"
-              bottom="-25%"
+              height="280px"
+              bottom="-45%"
               right="-30%"
             />
             <!-- triangle image -->
-            <TriangleCornerImage :img="Pp" triangleColor="#fafafa" />
+            <DecoratedImg :img="Pp" triangleColor="#fafafa" />
           </div>
           <div class="col5">
             <Typography variant="h3" mode="light">Pelatihan Pendidikan</Typography>
@@ -112,7 +112,7 @@
         />
 
         <Container noPadding>
-          <div class="col5" style="position: relative">
+          <div class="col5" style="position: relative; z-index: 200">
             <Typography variant="h3" mode="light">Satpam</Typography>
             <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
@@ -125,13 +125,13 @@
             <!-- container -->
 
             <!-- line decor bg horizontal satpam-->
-            <DecorLineBg to="right" top="50%" left="-30%" height="10px" width="100%" />
+            <DecorLineBg to="right" top="70%" left="-30%" height="10px" width="100%" />
 
             <!-- line decor bg vertical satpam -->
-            <DecorLineBg to="bottom" width="10px" height="400px" top="50%" right="130%" />
+            <DecorLineBg to="bottom" width="10px" height="400px" top="70%" right="130%" />
 
             <!-- triangle image -->
-            <TriangleCornerImage :img="Satpam" />
+            <DecoratedImg :img="Satpam" />
           </div>
         </Container>
       </div>
@@ -140,7 +140,7 @@
         <Container noPadding>
           <div class="col5" style="position: relative">
             <!-- line decor bg vertical 2 -->
-            <DecorLineBg to="bottom" width="10px" height="400px" top="-20%" right="30%" />
+            <DecorLineBg to="bottom" width="10px" height="300px" top="-20%" right="30%" />
 
             <!-- line decor bg horizontal 2-->
             <DecorLineBg
@@ -148,7 +148,7 @@
               to="left"
               width="100%"
               height="10px"
-              top="50%"
+              top="60%"
               left="30%"
             />
 
@@ -156,14 +156,14 @@
             <DecorLineBg
               to="bottom"
               width="10px"
-              height="400px"
-              bottom="-25%"
+              height="300px"
+              bottom="-72%"
               right="-30%"
             />
             <!-- triangle image -->
-            <TriangleCornerImage :img="CleaningService" triangleColor="#fafafa" />
+            <DecoratedImg :img="CleaningService" triangleColor="#fafafa" />
           </div>
-          <div class="col5">
+          <div class="col5" style="position: relative; z-index: 200">
             <Typography variant="h3" mode="light">Cleaning Service</Typography>
             <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
@@ -192,7 +192,7 @@
         <Container noPadding>
           <div class="col5" style="position: relative">
             <!-- line decor bg horizontal bottom 3-->
-            <DecorLineBg to="right" top="150%" left="59.8%" width="100%" height="10px" />
+            <DecorLineBg to="right" top="128%" left="59.8%" width="100%" height="10px" />
             <!-- line decor bg vertical bottom 3 -->
             <DecorLineBg
               to="bottom"
@@ -209,7 +209,7 @@
           </div>
           <div class="col5">
             <!-- triangle image -->
-            <TriangleCornerImage :img="KaryawanPerkantoran" />
+            <DecoratedImg :img="KaryawanPerkantoran" />
           </div>
         </Container>
       </div>
@@ -226,9 +226,9 @@
               right="38.2%"
             />
             <!-- triangle image -->
-            <TriangleCornerImage :img="Sales" triangleColor="#fafafa" />
+            <DecoratedImg :img="Sales" triangleColor="#fafafa" />
           </div>
-          <div class="col5">
+          <div class="col5" style="position: relative; z-index: 200">
             <Typography variant="h3" mode="light"
               >Sales Promotion dan Office Support</Typography
             >
@@ -247,7 +247,6 @@
 import { ref } from "vue";
 import Container from "./Container.vue";
 import Typography from "./Typography.vue";
-import TriangleCornerImage from "./TriangleCornerImage.vue";
 import DecorLineBg from "./DecorLineBg.vue";
 import Satpam from "../assets/gambar1.png";
 import CleaningService from "../assets/cleaningservice.png";
@@ -255,6 +254,7 @@ import Cs from "../assets/cs.png";
 import KaryawanPerkantoran from "../assets/karyawan-perkantoran.png";
 import Sales from "../assets/sales.png";
 import Pp from "../assets/pp3.png";
+import DecoratedImg from "./DecoratedImg.vue";
 </script>
 
 <style scoped>
