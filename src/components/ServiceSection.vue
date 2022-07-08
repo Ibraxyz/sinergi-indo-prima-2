@@ -35,7 +35,7 @@
 
             <!-- container -->
 
-            <!-- line decor bg vertical satpam-->
+            <!-- line decor bg vertical satpam
             <DecorLineBg
               to="bottom"
               top="-100px"
@@ -44,6 +44,7 @@
               height="50%"
               width="10px"
             />
+            -->
             <!-- end of line decor bg vertical -->
 
             <!-- line decor bg horizontal satpam-->
@@ -70,7 +71,7 @@
               to="left"
               width="100%"
               height="10px"
-              top="50%"
+              top="60%"
               left="30%"
             />
 
@@ -79,7 +80,7 @@
               to="bottom"
               width="10px"
               height="280px"
-              bottom="-45%"
+              bottom="-55%"
               right="-30%"
             />
             <!-- triangle image -->

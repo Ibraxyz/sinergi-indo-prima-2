@@ -3,8 +3,8 @@
     id="root_decor_wrapper"
     :style="{
       background: '#e96443',
-      background: `-webkit-linear-gradient(to ${to}, #e96443, #904e95)`,
-      background: `linear-gradient(to ${to}, #e96443, #904e95)`,
+      background: `-webkit-linear-gradient(to ${to}, rgba(255,0,100,1), red)`,
+      background: `linear-gradient(to ${to}, rgba(255,0,100,1), red)`,
       position: 'absolute',
       top: props.top,
       left: props.left,

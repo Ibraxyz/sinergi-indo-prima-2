@@ -193,6 +193,33 @@
       "
     >
       <div style="position: relative; width: 100%; height: 100%">
+        <DecorLineBg
+          style="transform: skewY(11deg); position: absolute"
+          to="bottom"
+          top="100px"
+          left="66%"
+          right="50%"
+          height="100%"
+          width="10px"
+        />
+        <DecorLineBg
+          style="transform: skewY(11deg); position: absolute"
+          to="bottom"
+          top="300px"
+          left="66%"
+          right="50%"
+          height="100%"
+          width="10px"
+        />
+        <DecorLineBg
+          style="transform: skewY(11deg); position: absolute"
+          to="bottom"
+          top="2630px"
+          left="30%"
+          right="50%"
+          height="400px"
+          width="10px"
+        />
         <!-- decor line -->
         <div
           class="first-decor"
@@ -239,6 +266,7 @@ import ThreedBox from "./components/ThreedBox.vue";
 import HeroImageGroup from "./components/HeroImageGroup.vue";
 import ContactSection from "./components/ContactSection.vue";
 import TrainingAndEducation from "./components/TrainingAndEducation.vue";
+import DecorLineBg from "./components/DecorLineBg.vue";
 
 import Satpam from "./assets/gambar1.png";
 import CleaningService from "./assets/cleaningservice.png";
