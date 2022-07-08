@@ -1,91 +1,34 @@
 <template>
-  <div class="wrapper bg-pan-right">
-    <div class="overlay"></div>
-    <div class="grad-overlay"></div>
-    <div class="content">
-      <Container>
-        <div class="col5">
-          <div style="display: inline-block">
-            <Typography variant="h2" mode="light">Our Facilities</Typography>
-            <div class="borderBottomRed"></div>
-          </div>
-          <Typography variant="p" mode="light">
-            Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
-            standard nasional dan terpercaya.</Typography
-          >
-          <Typography variant="span" mode="light">Pelajari lebih lanjut</Typography>
+  <div class="wrapper">
+    <!-- decor line -->
+    <div
+      style="
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-image: linear-gradient(to right, rgba(255, 0, 100, 1), blue);
+        height: 1px;
+        width: 100%;
+      "
+    ></div>
+    <Container style="transform: skewY(11deg); padding-top: 200px; padding-bottom: 200px">
+      <div class="col5">
+        <div style="display: inline-block">
+          <Typography variant="h2" mode="light">Facilities</Typography>
+          <div class="borderBottomRed"></div>
         </div>
-
-        <div class="col5">
-          <div
-            style="
-              width: 100%;
-              height: 300px;
-              overflow: hidden;
-              text-align: center;
-              background: #020b4a;
-            "
-            class="displayImg"
-          >
-            <img :src="selectedPhoto" alt="" style="width: auto; height: 300px" />
-          </div>
-          <div
-            style="
-              margin-top: 10px;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              width: 100%;
-            "
-          >
-            <div
-              style="
-                border-top: 1px solid rgba(255, 0, 100, 1);
-                border-left: 1px solid rgba(255, 0, 100, 1);
-                border-bottom: 1px solid rgba(255, 0, 100, 1);
-                box-sizing: border-box;
-                padding: 5px;
-                cursor: pointer;
-              "
-              @click="shiftPhoto('left')"
-            >
-              <BaseTriangle position="right" style="position: relative; left: -30%" />
-            </div>
-            <div
-              style="
-                box-sizing: border-box;
-                overflow-x: scroll;
-                flex: 1;
-                border: 1px solid rgba(255, 0, 100, 1);
-                height: 52px;
-                white-space: nowrap;
-              "
-            >
-              <img
-                v-for="i of Imgs"
-                class="small-thumb"
-                alt=""
-                :src="i"
-                @click="changePhoto(i)"
-              />
-            </div>
-            <div
-              style="
-                border-top: 1px solid rgba(255, 0, 100, 1);
-                border-right: 1px solid rgba(255, 0, 100, 1);
-                border-bottom: 1px solid rgba(255, 0, 100, 1);
-                box-sizing: border-box;
-                padding: 5px;
-                cursor: pointer;
-              "
-              @click="shiftPhoto('right')"
-            >
-              <BaseTriangle position="left" style="position: relative; right: -30%" />
-            </div>
-          </div>
-        </div>
-      </Container>
-    </div>
+        <Typography variant="p" mode="light">
+          Fasilitas kantor memiliki dampak yang baik dalam mendukung dan meningkatkan
+          kinerja karyawan, tentunya kami persiapkan dengan lengkap sesuai dengan
+          kebutuhan & perkembangan serta mendengarkan dan menerima segala bentuk kritik
+          dan saran yang bersifat membangun dengan harapan agar PT. Sinergi Indo Prima
+          menjadi partner bekerja sama yang fleksible dan komunikatif.
+        </Typography>
+      </div>
+      <div class="col5">
+        <ImageNavigator />
+      </div>
+    </Container>
   </div>
 </template>
 
@@ -93,148 +36,47 @@
 import { ref } from "vue";
 import Typography from "./Typography.vue";
 import Container from "./Container.vue";
-import TriangleCornerImage from "./TriangleCornerImage.vue";
-import Satpam from "../assets/gambar1.png";
-import CleaningService from "../assets/cleaningservice.png";
-import Cs from "../assets/cs.png";
-import KaryawanPerkantoran from "../assets/karyawan-perkantoran.png";
-import Sales from "../assets/sales.png";
-import Pp from "../assets/pp3.png";
-import BaseTriangle from "./BaseTriangle.vue";
+import ImageNavigator from "./ImageNavigator.vue";
 
-const Imgs = [Satpam, Cs, CleaningService, KaryawanPerkantoran, Sales, Pp];
-const selectedPhoto = ref(Satpam);
-
-function changePhoto(p) {
-  selectedPhoto.value = p;
-}
-
-function shiftPhoto(direction) {
-  let currentIndex = Imgs.indexOf(selectedPhoto.value);
-  switch (direction) {
-    case "left":
-      if (currentIndex == 0) {
-      } else {
-        currentIndex--;
-        changePhoto(Imgs[currentIndex]);
-      }
-      break;
-    case "right":
-      if (currentIndex == Imgs.length - 1) {
-      } else {
-        currentIndex++;
-        changePhoto(Imgs[currentIndex]);
-      }
-      break;
-
-    default:
-      break;
-  }
-}
+/**
+<div style="display: inline-block">
+<Typography variant="h2" mode="light">Facilities</Typography>
+<div class="borderBottomRed"></div>
+</div>
+ */
 </script>
 
 <style scoped>
+.wrapper {
+  position: relative;
+  width: 100%;
+  transform: skewY(-11deg);
+  background: rgba(2, 11, 74, 0.9); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #020b4a,
+    rgba(2, 11, 74, 0.9)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #020b4a,
+    rgba(2, 11, 74, 0.9)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .borderBottomRed {
   width: 100%;
   border-bottom: 3px solid red;
   margin-top: 3px;
 }
-.wrapper {
-  background-image: url("../assets/facilities.png");
-  position: relative;
-  padding-bottom: 80px;
-  padding-top: 80px;
-  overflow: hidden;
-}
-.imgPerspective {
-  width: 100%;
-  height: auto;
-}
-.small-thumb {
-  height: 52px;
-  width: auto;
-  opacity: 0.5;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-.small-thumb:hover {
-  opacity: 1;
-}
+/** reddish gradient
+      background: #c94b4b;
+      background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);
+      background: linear-gradient(to right, #4b134f, #c94b4b); */
 
-.overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #020b4a;
-  opacity: 0.7;
-}
+/** blueish background
+      background: #0f0c29;  
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
 
-.grad-overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to top, rgb(2, 11, 74), rgba(0, 0, 0, 0));
-  z-index: 9;
-}
-
-.content {
-  position: relative;
-  z-index: 10;
-}
-.col5 {
-  display: inline-block;
-  padding: 15px;
-  box-sizing: border-box;
-  width: 50%;
-  vertical-align: top;
-}
-
-.displayImg {
-  border: 1px solid rgba(255, 0, 100, 1);
-  -moz-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
-  -webkit-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
-  box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
-}
-
-@media only screen and (max-width: 768px) {
-  .col5 {
-    width: 100%;
-  }
-}
-.bg-pan-right {
-  -webkit-animation: bg-pan-right 32s infinite both;
-  animation: bg-pan-right 32s infinite both;
-}
-/* ----------------------------------------------
- * Generated by Animista on 2022-6-11 14:27:18
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation bg-pan-right
- * ----------------------------------------
- */
-@-webkit-keyframes bg-pan-right {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-@keyframes bg-pan-right {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
+      */
 </style>

@@ -3,4 +3,18 @@ body {
   /** background-color:#ECEFF1; *
   */
   background-color: #FAFAFA;
+  overflow-x: hidden;
+}
+
+.col5 {
+  display: inline-block;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 50%;
+  vertical-align: top;
+}
+@media only screen and (max-width: 768px) {
+  .col5 {
+    width: 100%;
+  }
 }

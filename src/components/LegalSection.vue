@@ -1,5 +1,16 @@
 <template>
   <div class="wrapper">
+    <!-- decor line -->
+    <div
+      style="
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-image: linear-gradient(to right, rgba(255, 0, 100, 1), blue);
+        height: 1px;
+        width: 100%;
+      "
+    ></div>
     <!-- wrapper for full screen image viewer (documents) -->
     <FullscreenDoc
       :isVisible="isFullScreenViewerVisible"
@@ -8,7 +19,7 @@
       @close-event="isFullScreenViewerVisible = false"
       @change-event="changePic($event)"
     />
-    <Container noPadding>
+    <Container style="transform: skewY(11deg)">
       <div class="col5" style="position: relative">
         <!-- wrapper for info display -->
         <div
@@ -144,19 +155,20 @@ import Legal16 from "../assets/legal16.png/";
 
 const Legals = [
   {
-    name: "Dokumen 01",
+    name:
+      "Akta Pendirian Perusahaan Nomor : 08,Tanggal 08 Agustus 2017, Notaris : Lila Meutia, SH, MkN",
     img: Legal1,
   },
   {
-    name: "Dokumen 02",
+    name: "Pengesahan Akta Pendirian Nomor : AHU-0034093.AH.01.01.Tahun 2017",
     img: Legal2,
   },
   {
-    name: "Dokumen 03",
+    name: "Surat Domisili Perusahaan Nomor : 503/1151",
     img: Legal3,
   },
   {
-    name: "Dokumen 04",
+    name: "OSS Izin Usaha Perdagangan",
     img: Legal4,
   },
   {
@@ -188,19 +200,19 @@ const Legals = [
     img: Legal11,
   },
   {
-    name: "Dokumen 12",
+    name: "Surat Keterangan Terdaftar Pajak (SKT) Nomor : S-5980KT/WPJ.01/KP.0503/2017",
     img: Legal12,
   },
   {
-    name: "Dokumen 13",
+    name: "Sertifikat BPJS Kesehatan Nomor : 00388526",
     img: Legal13,
   },
   {
-    name: "Dokumen 14",
+    name: "Sertifikat BPJS Ketenagakerjaan Nomor : 170000000244567",
     img: Legal14,
   },
   {
-    name: "Dokumen 15",
+    name: "NPWP : No. 82.653.691.4-113.000",
     img: Legal15,
   },
   {
@@ -232,6 +244,22 @@ function shiftLegal(dir) {
 function changePic(e) {
   //alert("from parent" + e);
   activeLegal.value = e;
+  /**
+Akta Pendirian Perusahaan Nomor : 08,Tanggal 08 Agustus 2017, Notaris : Lila Meutia, SH, MkN;
+Pengesahan Akta Pendirian Nomor : AHU-0034093.AH.01.01.Tahun 2017;
+Surat Domisili Perusahaan Nomor : 503/1151;
+OSS Nomor Induk Berusaha (NIB) : No. 8120012241154;
+OSS Izin Usaha Perdagangan;
+OSS badan Usaha Jasa Pengamanan;
+OSS Izin Usaha Perusahaan Penyedia Jasa Pekerja/Buruh;
+Surat Izin Operasional dari Polri sebagai badan usaha jasa penyedia tenaga pengamanan;
+NPWP : No. 82.653.691.4-113.000;
+Surat Keterangan Terdaftar Pajak (SKT) Nomor : S-5980KT/WPJ.01/KP.0503/2017;
+Surat Pengukuhan Pengusaha Kena Pajak (SPPKP) Nomor : S-363PKP/WPJ.01/KP.0503/2017;
+Sertifikat BPJS Ketenagakerjaan Nomor : 170000000244567;
+Sertifikat BPJS Kesehatan Nomor : 00388526;
+Sertifikat Asosiasi Badan usaha jasa pengamanan indonesia (ABUJPI) Nomor : 02038/17-10-2017;
+   */
 }
 </script>
 
@@ -243,6 +271,11 @@ function changePic(e) {
   padding-right: 15px;
   padding-bottom: 15px;
   background-color: #020b4a;
+  position: relative;
+  transform: skewY(-11deg);
+  margin-top: 0px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 h1 {
   margin: 0px;

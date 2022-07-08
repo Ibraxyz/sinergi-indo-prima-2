@@ -51,7 +51,7 @@ function changePicture(i, index) {
   bottom: 12%;
   right: 0;
   font-size: 0px; /** for removing white space on vertical axis of the inline block divs */
-  z-index: 3;
+  z-index: 1000;
 }
 .threed-content {
   width: 100%;
@@ -71,7 +71,7 @@ function changePicture(i, index) {
   bottom: 30%;
   right: 4%;
   overflow: hidden;
-  z-index: 3;
+  z-index: 1100;
   -moz-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
   -webkit-box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
   box-shadow: 0px 0px 300px 100px rgba(255, 0, 100, 0.4);
@@ -171,7 +171,7 @@ function changePicture(i, index) {
 .threedbox img {
   width: 180%;
   height: auto;
-  opacity: 0.3;
+  opacity: 1;
 }
 
 .threedbox img:hover {

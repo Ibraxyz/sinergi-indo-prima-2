@@ -171,21 +171,56 @@
   </Hero> -->
 
   <!-- services list -->
-  <div style="margin-bottom: 80px">
-    <Section1>
+  <div
+    style="
+      position: relative;
+      transform: skewY(-11deg);
+      background-color: #020b4a;
+      z-index: 100;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    "
+  >
+    <!-- decor -->
+    <div
+      style="
+        position: absolute;
+        top: -250px;
+        left: 0px;
+        background-color: #020b4a;
+        width: 100%;
+        height: 300px;
+      "
+    >
+      <div style="position: relative; width: 100%; height: 100%">
+        <!-- decor line -->
+        <div
+          style="
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-image: linear-gradient(to right, rgba(255, 0, 100, 1), red);
+            height: 7px;
+            width: 100%;
+          "
+        ></div>
+      </div>
+    </div>
+    <Section1 style="transform: skewY(11deg)">
       <ServiceSection />
     </Section1>
   </div>
 
-  <!-- Facilities  -->
-  <div style="">
-    <FacilitiesSection />
-  </div>
+  <!-- training dan edukasi -->
+  <div style=""><TrainingAndEducation /></div>
+
+  <!-- facilities -->
+  <FacilitiesSection />
+
+  <!-- our clients -->
 
   <!-- legals -->
-  <div style="">
-    <LegalSection />
-  </div>
+  <LegalSection />
 </template>
 
 <script setup>
@@ -202,6 +237,8 @@ import Container from "./components/Container.vue";
 import Typography from "./components/Typography.vue";
 import ThreedBox from "./components/ThreedBox.vue";
 import HeroImageGroup from "./components/HeroImageGroup.vue";
+import ContactSection from "./components/ContactSection.vue";
+import TrainingAndEducation from "./components/TrainingAndEducation.vue";
 
 import Satpam from "./assets/gambar1.png";
 import CleaningService from "./assets/cleaningservice.png";

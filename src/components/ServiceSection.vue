@@ -1,19 +1,12 @@
 <template>
   <div style="box-sizing: border-box; padding-top: 0px">
     <div style="text-align: center">
-      <Typography variant="h2" mode="dark" sx="color:#01579B">Our Services</Typography>
+      <Typography variant="h2" mode="light">Our Services</Typography>
     </div>
     <div class="borderBottomRed"></div>
 
     <div class="service-section">
-      <div
-        class="section-individual"
-        style="
-          background-color: rgba(227, 242, 253, 0.3);
-          position: relative;
-          overflow: hidden;
-        "
-      >
+      <div class="section-individual" style="position: relative; overflow: hidden">
         <!-- decorative bg -->
         <img
           src="../assets/g-decor.png"
@@ -25,22 +18,17 @@
             width: 100%;
             height: auto;
             z-index: -1;
-            opacity: 0.15;
+            opacity: 0.1;
           "
         />
 
         <Container noPadding>
           <div class="col5" style="position: relative">
-            <Typography variant="h3" mode="dark" sx="color:#01579B"
-              >Customer Service</Typography
-            >
-            <Typography variant="p" mode="dark">
+            <Typography variant="h3" mode="light">Customer Service</Typography>
+            <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
               standard nasional dan terpercaya.
             </Typography>
-            <Typography variant="span" mode="dark" sx="color:#01579B;font-weight:100"
-              >Pelajari lebih lanjut</Typography
-            >
           </div>
           <div class="col5" style="position: relative">
             <!-- image describing feature on the side -->
@@ -98,28 +86,16 @@
             <TriangleCornerImage :img="Pp" triangleColor="#fafafa" />
           </div>
           <div class="col5">
-            <Typography variant="h3" mode="dark" sx="color:#01579B"
-              >Pelatihan Pendidikan</Typography
-            >
-            <Typography variant="p" mode="dark">
+            <Typography variant="h3" mode="light">Pelatihan Pendidikan</Typography>
+            <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
               standard nasional dan terpercaya.
             </Typography>
-            <Typography variant="span" mode="dark" sx="color:#01579B"
-              >Pelajari lebih lanjut</Typography
-            >
           </div>
         </Container>
       </div>
 
-      <div
-        class="section-individual"
-        style="
-          background-color: rgba(227, 242, 253, 0.3);
-          position: relative;
-          overflow: hidden;
-        "
-      >
+      <div class="section-individual" style="position: relative; overflow: hidden">
         <!-- decorative bg -->
         <img
           src="../assets/g-decor.png"
@@ -137,14 +113,11 @@
 
         <Container noPadding>
           <div class="col5" style="position: relative">
-            <Typography variant="h3" mode="dark" sx="color:#01579B">Satpam</Typography>
-            <Typography variant="p" mode="dark">
+            <Typography variant="h3" mode="light">Satpam</Typography>
+            <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
               standard nasional dan terpercaya.
             </Typography>
-            <Typography variant="span" mode="dark" sx="color:#01579B;font-weight:100"
-              >Pelajari lebih lanjut</Typography
-            >
           </div>
           <div class="col5" style="position: relative">
             <!-- image describing feature on the side -->
@@ -191,28 +164,16 @@
             <TriangleCornerImage :img="CleaningService" triangleColor="#fafafa" />
           </div>
           <div class="col5">
-            <Typography variant="h3" mode="dark" sx="color:#01579B"
-              >Cleaning Service</Typography
-            >
-            <Typography variant="p" mode="dark">
+            <Typography variant="h3" mode="light">Cleaning Service</Typography>
+            <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
               standard nasional dan terpercaya.
             </Typography>
-            <Typography variant="span" mode="dark" sx="color:#01579B"
-              >Pelajari lebih lanjut</Typography
-            >
           </div>
         </Container>
       </div>
 
-      <div
-        class="section-individual"
-        style="
-          background-color: rgba(227, 242, 253, 0.3);
-          position: relative;
-          overflow: hidden;
-        "
-      >
+      <div class="section-individual" style="position: relative; overflow: hidden">
         <!-- decorative bg -->
         <img
           src="../assets/g-decor.png"
@@ -240,16 +201,11 @@
               bottom="-248%"
               right="38.2%"
             />
-            <Typography variant="h3" mode="dark" sx="color:#01579B"
-              >Karyawan Perkantoran</Typography
-            >
-            <Typography variant="p" mode="dark">
+            <Typography variant="h3" mode="light">Karyawan Perkantoran</Typography>
+            <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
               standard nasional dan terpercaya.
             </Typography>
-            <Typography variant="span" mode="dark" sx="color:#01579B"
-              >Pelajari lebih lanjut</Typography
-            >
           </div>
           <div class="col5">
             <!-- triangle image -->
@@ -273,16 +229,13 @@
             <TriangleCornerImage :img="Sales" triangleColor="#fafafa" />
           </div>
           <div class="col5">
-            <Typography variant="h3" mode="dark" sx="color:#01579B"
+            <Typography variant="h3" mode="light"
               >Sales Promotion dan Office Support</Typography
             >
-            <Typography variant="p" mode="dark">
+            <Typography variant="p" mode="light">
               Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
               standard nasional dan terpercaya.
             </Typography>
-            <Typography variant="span" mode="dark" sx="color:#01579B"
-              >Pelajari lebih lanjut</Typography
-            >
           </div>
         </Container>
       </div>
