@@ -2,7 +2,7 @@ body {
   margin: 0;
   /** background-color:#ECEFF1; *
   */
-  background-color: #FAFAFA;
+  background-color: rgba(40,0,100,1);
   overflow-x: hidden;
 }
 
@@ -12,6 +12,12 @@ body {
   box-sizing: border-box;
   width: 50%;
   vertical-align: top;
+}
+
+.borderBottomRed {
+  width: 100%;
+  border-bottom: 3px solid red;
+  margin-top: 3px;
 }
 @media only screen and (max-width: 768px) {
   .col5 {

@@ -122,7 +122,6 @@
           Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
           standard nasional dan terpercaya.</Typography
         >
-        <Typography variant="span" mode="light">Pelajari lebih lanjut</Typography>
       </div>
     </Container>
   </div>

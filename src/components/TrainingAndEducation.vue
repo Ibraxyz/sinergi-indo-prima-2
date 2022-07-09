@@ -11,20 +11,27 @@
         width: 100%;
       "
     ></div>
-    <Container style="transform: skewY(11deg); padding-top: 200px; padding-bottom: 200px">
+    <Container
+      style="transform: skewY(11deg); padding-top: 200px; padding-bottom: 200px"
+    >
       <!-- background -->
       <div style="position: relative">
-        <div class="col5"></div>
+        <div class="col5">
+          <ImageNavigator />
+        </div>
         <div class="col5">
           <div style="display: inline-block">
-            <Typography variant="h2" mode="light">Training dan Edukasi</Typography>
+            <Typography variant="h2" mode="light"
+              >Training dan Edukasi</Typography
+            >
             <div class="borderBottomRed"></div>
           </div>
           <Typography variant="p" mode="light">
-            Dengan mengikuti pelatihan intensif, para calon tenaga kerja akan mendapatkan
-            pengetahuan dan keterampilan yang memadai serta mendukung performa mereka
-            dalam bekerja. training dan edukasi menjadi hal pokok yang harus dimiliki
-            setiap tenaga kerja, guna menciptakan tenaga kerja yang profesional.
+            Dengan mengikuti pelatihan intensif, para calon tenaga kerja akan
+            mendapatkan pengetahuan dan keterampilan yang memadai serta
+            mendukung performa mereka dalam bekerja. training dan edukasi
+            menjadi hal pokok yang harus dimiliki setiap tenaga kerja, guna
+            menciptakan tenaga kerja yang profesional.
           </Typography>
         </div>
       </div>
@@ -35,6 +42,7 @@
 <script setup>
 import Container from "./Container.vue";
 import Typography from "./Typography.vue";
+import ImageNavigator from "./ImageNavigator.vue";
 </script>
 
 <style scoped>

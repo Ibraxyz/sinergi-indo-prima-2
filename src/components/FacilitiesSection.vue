@@ -11,18 +11,21 @@
         width: 100%;
       "
     ></div>
-    <Container style="transform: skewY(11deg); padding-top: 200px; padding-bottom: 200px">
+    <Container
+      style="transform: skewY(11deg); padding-top: 200px; padding-bottom: 200px"
+    >
       <div class="col5">
         <div style="display: inline-block">
           <Typography variant="h2" mode="light">Facilities</Typography>
           <div class="borderBottomRed"></div>
         </div>
         <Typography variant="p" mode="light">
-          Fasilitas kantor memiliki dampak yang baik dalam mendukung dan meningkatkan
-          kinerja karyawan, tentunya kami persiapkan dengan lengkap sesuai dengan
-          kebutuhan & perkembangan serta mendengarkan dan menerima segala bentuk kritik
-          dan saran yang bersifat membangun dengan harapan agar PT. Sinergi Indo Prima
-          menjadi partner bekerja sama yang fleksible dan komunikatif.
+          Fasilitas kantor memiliki dampak yang baik dalam mendukung dan
+          meningkatkan kinerja karyawan, tentunya kami persiapkan dengan lengkap
+          sesuai dengan kebutuhan & perkembangan serta mendengarkan dan menerima
+          segala bentuk kritik dan saran yang bersifat membangun dengan harapan
+          agar PT. Sinergi Indo Prima menjadi partner bekerja sama yang
+          fleksible dan komunikatif.
         </Typography>
       </div>
       <div class="col5">

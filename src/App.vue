@@ -16,9 +16,6 @@
               <TopMenuItem text="Home" />
             </li>
             <li>
-              <TopMenuItem text="About" />
-            </li>
-            <li>
               <TopMenuItem text="Service" />
             </li>
             <li>
@@ -248,6 +245,9 @@
 
   <!-- legals -->
   <LegalSection />
+
+  <!-- contact -->
+  <ContactSection />
 </template>
 
 <script setup>

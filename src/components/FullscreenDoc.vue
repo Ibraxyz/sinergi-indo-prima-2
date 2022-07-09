@@ -1,7 +1,9 @@
 <template>
   <div class="wrapperz" v-if="props.isVisible">
     <!-- wrapper for image navigator and image displayer -->
-    <div style="width: 100%; height: 100%; top: 0px; left: 0px; position: absolute">
+    <div
+      style="width: 100%; height: 100%; top: 0px; left: 0px; position: absolute"
+    >
       <!-- image navigator -->
       <div
         style="
@@ -19,7 +21,12 @@
           v-for="(image, index) of props.images"
           :src="image.img"
           alt=""
-          style="width: 100%; height: auto; margin-bottom: 20px; cursor: pointer"
+          style="
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            cursor: pointer;
+          "
           @click="changeIndex(index)"
         />
       </div>

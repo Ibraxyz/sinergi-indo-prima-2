@@ -3,7 +3,9 @@
     <!-- the 3d canvas -->
     <div class="threed-content">
       <div
-        :class="[activeIndex === index ? 'threedbox threedbox-active' : 'threedbox']"
+        :class="[
+          activeIndex === index ? 'threedbox threedbox-active' : 'threedbox',
+        ]"
         v-for="(i, index) of Imgs"
         @click="changePicture(i, index)"
       >
@@ -28,7 +30,16 @@ import KaryawanPerkantoran from "../assets/karyawan-perkantoran.png";
 import Sales from "../assets/sales.png";
 import Pp from "../assets/pp3.png";
 
-const Imgs = [CleaningService, Pp, Satpam, Cs, KaryawanPerkantoran, Sales, Pp, Satpam];
+const Imgs = [
+  CleaningService,
+  Pp,
+  Satpam,
+  Cs,
+  KaryawanPerkantoran,
+  Sales,
+  Pp,
+  Satpam,
+];
 
 const emit = defineEmits(["changeBackground"]);
 

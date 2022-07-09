@@ -13,8 +13,8 @@
             >The Most Reliable Service Provider</Typography
           >
           <Typography variant="p" mode="light">
-            Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
-            standard nasional dan terpercaya.
+            Perusahaan penyedia jasa prima, handal, baik dan profesional serta
+            memiliki standard nasional dan terpercaya.
           </Typography>
         </div>
       </Container>
@@ -23,7 +23,12 @@
     <!-- background -->
     <div class="hero-bg" :style="{ 'background-image': `url(${selectedBg})` }">
       <div
-        style="width: 100%; height: 100%; background-color: #020b4a; opacity: 0.8"
+        style="
+          width: 100%;
+          height: 100%;
+          background-color: #020b4a;
+          opacity: 0.8;
+        "
       ></div>
     </div>
 
