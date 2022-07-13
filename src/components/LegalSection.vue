@@ -1,4 +1,12 @@
 <template>
+  <!-- wrapper for full screen image viewer (documents) -->
+  <FullscreenDoc
+    :isVisible="isFullScreenViewerVisible"
+    :images="Legals"
+    :activeIndex="activeLegal"
+    @close-event="isFullScreenViewerVisible = false"
+    @change-event="changePic($event)"
+  />
   <div class="wrapper">
     <!-- decor line -->
     <div
@@ -11,14 +19,6 @@
         width: 100%;
       "
     ></div>
-    <!-- wrapper for full screen image viewer (documents) -->
-    <FullscreenDoc
-      :isVisible="isFullScreenViewerVisible"
-      :images="Legals"
-      :activeIndex="activeLegal"
-      @close-event="isFullScreenViewerVisible = false"
-      @change-event="changePic($event)"
-    />
     <Container style="transform: skewY(11deg)">
       <div class="col5" style="position: relative">
         <!-- wrapper for info display -->
@@ -82,7 +82,14 @@
         </div>
 
         <!-- 3d projection -->
-        <div style="position: relative; height: 400px; perspective: 600px; z-index: 3">
+        <div
+          style="
+            position: relative;
+            height: 400px;
+            perspective: 600px;
+            z-index: 3;
+          "
+        >
           <div
             class="rotatedDiv"
             style="transform-style: preserve-3d; position: relative"
@@ -107,7 +114,11 @@
                 style="width: 64px; height: 64px; position: relative; top: 26%"
                 @click="isFullScreenViewerVisible = true"
               >
-                <img :src="SearchIcon" alt="" style="width: 100%; height: auto" />
+                <img
+                  :src="SearchIcon"
+                  alt=""
+                  style="width: 100%; height: auto"
+                />
               </div>
             </div>
           </div>
@@ -119,8 +130,8 @@
           <div class="borderBottomRed"></div>
         </div>
         <Typography variant="p" mode="light">
-          Perusahaan penyedia jasa prima, handal, baik dan profesional serta memiliki
-          standard nasional dan terpercaya.</Typography
+          Perusahaan penyedia jasa prima, handal, baik dan profesional serta
+          memiliki standard nasional dan terpercaya.</Typography
         >
       </div>
     </Container>
@@ -154,8 +165,7 @@ import Legal16 from "../assets/legal16.png/";
 
 const Legals = [
   {
-    name:
-      "Akta Pendirian Perusahaan Nomor : 08,Tanggal 08 Agustus 2017, Notaris : Lila Meutia, SH, MkN",
+    name: "Akta Pendirian Perusahaan Nomor : 08,Tanggal 08 Agustus 2017, Notaris : Lila Meutia, SH, MkN",
     img: Legal1,
   },
   {

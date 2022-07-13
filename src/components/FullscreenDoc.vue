@@ -122,7 +122,7 @@ function changeIndex(index) {
   background-color: #242424;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 100000;
   opacity: 0;
   -webkit-animation: images-entry 1s linear alternate both;
   animation: images-entry 0.5s linear alternate both;

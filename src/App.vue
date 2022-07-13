@@ -2,7 +2,9 @@
   <!-- Hero -->
   <HeroVer2>
     <template #desktopmenu>
-      <nav style="position: absolute; top: 0px; left: 0px; z-index: 3; width: 100%">
+      <nav
+        style="position: absolute; top: 0px; left: 0px; z-index: 3; width: 100%"
+      >
         <Container>
           <ul>
             <li>
@@ -224,7 +226,11 @@
             position: absolute;
             top: 0px;
             left: 0px;
-            background-image: linear-gradient(to right, rgba(255, 0, 100, 1), red);
+            background-image: linear-gradient(
+              to right,
+              rgba(255, 0, 100, 1),
+              red
+            );
             height: 7px;
           "
         ></div>
@@ -451,9 +457,10 @@ ul li:last-child {
  */
 
 .shake-vertical {
-  -webkit-animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+  -webkit-animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite both;
+  animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
     both;
-  animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
 }
 
 @-webkit-keyframes shake-vertical {
